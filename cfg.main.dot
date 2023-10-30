@@ -1,0 +1,12 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x6b1c220 [shape=record,label="{entry:\l  %retval = alloca i32, align 4\l  %a = alloca i32, align 4\l  %b = alloca i32, align 4\l  %sum = alloca i32, align 4\l  store i32 0, i32* %retval, align 4\l  store i32 0, i32* %a, align 4\l  store i32 0, i32* %sum, align 4\l  %call = call i32 (i8*, ...) @scanf(i8* getelementptr inbounds ([3 x i8], [3\l... x i8]* @.str, i32 0, i32 0), i32* %b)\l  br label %while.cond\l}"];
+	Node0x6b1c220 -> Node0x6b1d1f0;
+	Node0x6b1d1f0 [shape=record,label="{while.cond:                                       \l  %0 = load i32, i32* %a, align 4\l  %1 = load i32, i32* %b, align 4\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b1d1f0:s0 -> Node0x6b1d440;
+	Node0x6b1d1f0:s1 -> Node0x6b1d520;
+	Node0x6b1d440 [shape=record,label="{while.body:                                       \l  %2 = load i32, i32* %a, align 4\l  %3 = load i32, i32* %sum, align 4\l  %add = add nsw i32 %3, %2\l  store i32 %add, i32* %sum, align 4\l  %4 = load i32, i32* %a, align 4\l  %inc = add nsw i32 %4, 1\l  store i32 %inc, i32* %a, align 4\l  br label %while.cond\l}"];
+	Node0x6b1d440 -> Node0x6b1d1f0;
+	Node0x6b1d520 [shape=record,label="{while.end:                                        \l  %5 = load i32, i32* %sum, align 4\l  %call1 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8],\l... [5 x i8]* @.str.1, i32 0, i32 0), i32 %5)\l  %6 = load i32, i32* %retval, align 4\l  ret i32 %6\l}"];
+}
