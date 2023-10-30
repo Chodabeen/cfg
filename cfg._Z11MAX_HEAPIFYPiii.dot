@@ -1,0 +1,28 @@
+digraph "CFG for '_Z11MAX_HEAPIFYPiii' function" {
+	label="CFG for '_Z11MAX_HEAPIFYPiii' function";
+
+	Node0x6b1f690 [shape=record,label="{entry:\l  %a.addr = alloca i32*, align 8\l  %i.addr = alloca i32, align 4\l  %n.addr = alloca i32, align 4\l  %l = alloca i32, align 4\l  %r = alloca i32, align 4\l  %largest = alloca i32, align 4\l  %loc = alloca i32, align 4\l  store i32* %a, i32** %a.addr, align 8\l  store i32 %i, i32* %i.addr, align 4\l  store i32 %n, i32* %n.addr, align 4\l  %0 = load i32, i32* %i.addr, align 4\l  %mul = mul nsw i32 2, %0\l  store i32 %mul, i32* %l, align 4\l  %1 = load i32, i32* %i.addr, align 4\l  %mul1 = mul nsw i32 2, %1\l  %add = add nsw i32 %mul1, 1\l  store i32 %add, i32* %r, align 4\l  %2 = load i32, i32* %l, align 4\l  %3 = load i32, i32* %n.addr, align 4\l  %cmp = icmp sle i32 %2, %3\l  br i1 %cmp, label %land.lhs.true, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x6b1f690:s0 -> Node0x6b1f600;
+	Node0x6b1f690:s1 -> Node0x6b20100;
+	Node0x6b1f600 [shape=record,label="{land.lhs.true:                                    \l  %4 = load i32*, i32** %a.addr, align 8\l  %5 = load i32, i32* %l, align 4\l  %idxprom = sext i32 %5 to i64\l  %arrayidx = getelementptr inbounds i32, i32* %4, i64 %idxprom\l  %6 = load i32, i32* %arrayidx, align 4\l  %7 = load i32*, i32** %a.addr, align 8\l  %8 = load i32, i32* %i.addr, align 4\l  %idxprom2 = sext i32 %8 to i64\l  %arrayidx3 = getelementptr inbounds i32, i32* %7, i64 %idxprom2\l  %9 = load i32, i32* %arrayidx3, align 4\l  %cmp4 = icmp sgt i32 %6, %9\l  br i1 %cmp4, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x6b1f600:s0 -> Node0x6b20260;
+	Node0x6b1f600:s1 -> Node0x6b20100;
+	Node0x6b20260 [shape=record,label="{if.then:                                          \l  %10 = load i32, i32* %l, align 4\l  store i32 %10, i32* %largest, align 4\l  br label %if.end\l}"];
+	Node0x6b20260 -> Node0x6b20970;
+	Node0x6b20100 [shape=record,label="{if.else:                                          \l  %11 = load i32, i32* %i.addr, align 4\l  store i32 %11, i32* %largest, align 4\l  br label %if.end\l}"];
+	Node0x6b20100 -> Node0x6b20970;
+	Node0x6b20970 [shape=record,label="{if.end:                                           \l  %12 = load i32, i32* %r, align 4\l  %13 = load i32, i32* %n.addr, align 4\l  %cmp5 = icmp sle i32 %12, %13\l  br i1 %cmp5, label %land.lhs.true6, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x6b20970:s0 -> Node0x6b1fd00;
+	Node0x6b20970:s1 -> Node0x6b1fde0;
+	Node0x6b1fd00 [shape=record,label="{land.lhs.true6:                                   \l  %14 = load i32*, i32** %a.addr, align 8\l  %15 = load i32, i32* %r, align 4\l  %idxprom7 = sext i32 %15 to i64\l  %arrayidx8 = getelementptr inbounds i32, i32* %14, i64 %idxprom7\l  %16 = load i32, i32* %arrayidx8, align 4\l  %17 = load i32*, i32** %a.addr, align 8\l  %18 = load i32, i32* %largest, align 4\l  %idxprom9 = sext i32 %18 to i64\l  %arrayidx10 = getelementptr inbounds i32, i32* %17, i64 %idxprom9\l  %19 = load i32, i32* %arrayidx10, align 4\l  %cmp11 = icmp sgt i32 %16, %19\l  br i1 %cmp11, label %if.then12, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x6b1fd00:s0 -> Node0x6b38fd0;
+	Node0x6b1fd00:s1 -> Node0x6b1fde0;
+	Node0x6b38fd0 [shape=record,label="{if.then12:                                        \l  %20 = load i32, i32* %r, align 4\l  store i32 %20, i32* %largest, align 4\l  br label %if.end13\l}"];
+	Node0x6b38fd0 -> Node0x6b1fde0;
+	Node0x6b1fde0 [shape=record,label="{if.end13:                                         \l  %21 = load i32, i32* %largest, align 4\l  %22 = load i32, i32* %i.addr, align 4\l  %cmp14 = icmp ne i32 %21, %22\l  br i1 %cmp14, label %if.then15, label %if.end24\l|{<s0>T|<s1>F}}"];
+	Node0x6b1fde0:s0 -> Node0x6b1c160;
+	Node0x6b1fde0:s1 -> Node0x6b1c240;
+	Node0x6b1c160 [shape=record,label="{if.then15:                                        \l  %23 = load i32*, i32** %a.addr, align 8\l  %24 = load i32, i32* %i.addr, align 4\l  %idxprom16 = sext i32 %24 to i64\l  %arrayidx17 = getelementptr inbounds i32, i32* %23, i64 %idxprom16\l  %25 = load i32, i32* %arrayidx17, align 4\l  store i32 %25, i32* %loc, align 4\l  %26 = load i32*, i32** %a.addr, align 8\l  %27 = load i32, i32* %largest, align 4\l  %idxprom18 = sext i32 %27 to i64\l  %arrayidx19 = getelementptr inbounds i32, i32* %26, i64 %idxprom18\l  %28 = load i32, i32* %arrayidx19, align 4\l  %29 = load i32*, i32** %a.addr, align 8\l  %30 = load i32, i32* %i.addr, align 4\l  %idxprom20 = sext i32 %30 to i64\l  %arrayidx21 = getelementptr inbounds i32, i32* %29, i64 %idxprom20\l  store i32 %28, i32* %arrayidx21, align 4\l  %31 = load i32, i32* %loc, align 4\l  %32 = load i32*, i32** %a.addr, align 8\l  %33 = load i32, i32* %largest, align 4\l  %idxprom22 = sext i32 %33 to i64\l  %arrayidx23 = getelementptr inbounds i32, i32* %32, i64 %idxprom22\l  store i32 %31, i32* %arrayidx23, align 4\l  %34 = load i32*, i32** %a.addr, align 8\l  %35 = load i32, i32* %largest, align 4\l  %36 = load i32, i32* %n.addr, align 4\l  call void @_Z11MAX_HEAPIFYPiii(i32* %34, i32 %35, i32 %36)\l  br label %if.end24\l}"];
+	Node0x6b1c160 -> Node0x6b1c240;
+	Node0x6b1c240 [shape=record,label="{if.end24:                                         \l  ret void\l}"];
+}
