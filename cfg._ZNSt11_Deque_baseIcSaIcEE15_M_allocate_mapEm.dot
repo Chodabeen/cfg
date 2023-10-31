@@ -1,0 +1,11 @@
+digraph "CFG for '_ZNSt11_Deque_baseIcSaIcEE15_M_allocate_mapEm' function" {
+	label="CFG for '_ZNSt11_Deque_baseIcSaIcEE15_M_allocate_mapEm' function";
+
+	Node0x6b73a60 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::_Deque_base\"*, align 8\l  %__n.addr = alloca i64, align 8\l  %__map_alloc = alloca %\"class.std::allocator.0\", align 1\l  %exn.slot = alloca i8*\l  %ehselector.slot = alloca i32\l  store %\"class.std::_Deque_base\"* %this, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  store i64 %__n, i64* %__n.addr, align 8\l  %this1 = load %\"class.std::_Deque_base\"*, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  call void\l... @_ZNKSt11_Deque_baseIcSaIcEE20_M_get_map_allocatorEv(%\"class.std::allocator.0\"\l...* sret %__map_alloc, %\"class.std::_Deque_base\"* %this1)\l  %0 = load i64, i64* %__n.addr, align 8\l  %call = invoke i8**\l... @_ZN9__gnu_cxx14__alloc_traitsISaIPcEE8allocateERS2_m(%\"class.std::allocator.0\l...\"* dereferenceable(1) %__map_alloc, i64 %0)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x6b73a60 -> Node0x6b74190;
+	Node0x6b73a60 -> Node0x6b74270;
+	Node0x6b74190 [shape=record,label="{invoke.cont:                                      \l  call void @_ZNSaIPcED2Ev(%\"class.std::allocator.0\"* %__map_alloc) #2\l  ret i8** %call\l}"];
+	Node0x6b74270 [shape=record,label="{lpad:                                             \l  %1 = landingpad \{ i8*, i32 \}\l          cleanup\l  %2 = extractvalue \{ i8*, i32 \} %1, 0\l  store i8* %2, i8** %exn.slot, align 8\l  %3 = extractvalue \{ i8*, i32 \} %1, 1\l  store i32 %3, i32* %ehselector.slot, align 4\l  call void @_ZNSaIPcED2Ev(%\"class.std::allocator.0\"* %__map_alloc) #2\l  br label %eh.resume\l}"];
+	Node0x6b74270 -> Node0x6b74bc0;
+	Node0x6b74bc0 [shape=record,label="{eh.resume:                                        \l  %exn = load i8*, i8** %exn.slot, align 8\l  %sel = load i32, i32* %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ i8*, i32 \} undef, i8* %exn, 0\l  %lpad.val2 = insertvalue \{ i8*, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ i8*, i32 \} %lpad.val2\l}"];
+}

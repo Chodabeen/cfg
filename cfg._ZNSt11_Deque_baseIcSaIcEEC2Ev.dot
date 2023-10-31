@@ -1,0 +1,11 @@
+digraph "CFG for '_ZNSt11_Deque_baseIcSaIcEEC2Ev' function" {
+	label="CFG for '_ZNSt11_Deque_baseIcSaIcEEC2Ev' function";
+
+	Node0x6b66c10 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::_Deque_base\"*, align 8\l  %exn.slot = alloca i8*\l  %ehselector.slot = alloca i32\l  store %\"class.std::_Deque_base\"* %this, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %this1 = load %\"class.std::_Deque_base\"*, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\",\l... %\"class.std::_Deque_base\"* %this1, i32 0, i32 0\l  call void\l... @_ZNSt11_Deque_baseIcSaIcEE11_Deque_implC2Ev(%\"struct.std::_Deque_base\<char,\l... std::allocator\<char\> \>::_Deque_impl\"* %_M_impl)\l  invoke void\l... @_ZNSt11_Deque_baseIcSaIcEE17_M_initialize_mapEm(%\"class.std::_Deque_base\"*\l... %this1, i64 0)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x6b66c10 -> Node0x6b671b0;
+	Node0x6b66c10 -> Node0x6b67290;
+	Node0x6b671b0 [shape=record,label="{invoke.cont:                                      \l  ret void\l}"];
+	Node0x6b67290 [shape=record,label="{lpad:                                             \l  %0 = landingpad \{ i8*, i32 \}\l          cleanup\l  %1 = extractvalue \{ i8*, i32 \} %0, 0\l  store i8* %1, i8** %exn.slot, align 8\l  %2 = extractvalue \{ i8*, i32 \} %0, 1\l  store i32 %2, i32* %ehselector.slot, align 4\l  call void\l... @_ZNSt11_Deque_baseIcSaIcEE11_Deque_implD2Ev(%\"struct.std::_Deque_base\<char,\l... std::allocator\<char\> \>::_Deque_impl\"* %_M_impl) #2\l  br label %eh.resume\l}"];
+	Node0x6b67290 -> Node0x6b67a50;
+	Node0x6b67a50 [shape=record,label="{eh.resume:                                        \l  %exn = load i8*, i8** %exn.slot, align 8\l  %sel = load i32, i32* %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ i8*, i32 \} undef, i8* %exn, 0\l  %lpad.val2 = insertvalue \{ i8*, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ i8*, i32 \} %lpad.val2\l}"];
+}

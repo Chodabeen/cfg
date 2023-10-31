@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt10_Iter_baseISt15_Deque_iteratorIcRKcPS1_ELb0EE7_S_baseES4_' function" {
+	label="CFG for '_ZNSt10_Iter_baseISt15_Deque_iteratorIcRKcPS1_ELb0EE7_S_baseES4_' function";
+
+	Node0x6ba43e0 [shape=record,label="{entry:\l  %0 = bitcast %\"struct.std::_Deque_iterator.3\"* %agg.result to i8*\l  %1 = bitcast %\"struct.std::_Deque_iterator.3\"* %__it to i8*\l  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* %1, i64 32, i32 8, i1 false)\l  ret void\l}"];
+}

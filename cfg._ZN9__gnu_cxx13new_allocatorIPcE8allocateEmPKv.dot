@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN9__gnu_cxx13new_allocatorIPcE8allocateEmPKv' function" {
+	label="CFG for '_ZN9__gnu_cxx13new_allocatorIPcE8allocateEmPKv' function";
+
+	Node0x6b5aa40 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.__gnu_cxx::new_allocator.1\"*, align 8\l  %__n.addr = alloca i64, align 8\l  %.addr = alloca i8*, align 8\l  store %\"class.__gnu_cxx::new_allocator.1\"* %this,\l... %\"class.__gnu_cxx::new_allocator.1\"** %this.addr, align 8\l  store i64 %__n, i64* %__n.addr, align 8\l  store i8* %0, i8** %.addr, align 8\l  %this1 = load %\"class.__gnu_cxx::new_allocator.1\"*,\l... %\"class.__gnu_cxx::new_allocator.1\"** %this.addr, align 8\l  %1 = load i64, i64* %__n.addr, align 8\l  %call = call i64\l... @_ZNK9__gnu_cxx13new_allocatorIPcE8max_sizeEv(%\"class.__gnu_cxx::new_allocator\l....1\"* %this1) #2\l  %cmp = icmp ugt i64 %1, %call\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b5aa40:s0 -> Node0x6b5b100;
+	Node0x6b5aa40:s1 -> Node0x6b5b1d0;
+	Node0x6b5b100 [shape=record,label="{if.then:                                          \l  call void @_ZSt17__throw_bad_allocv() #13\l  unreachable\l}"];
+	Node0x6b5b1d0 [shape=record,label="{if.end:                                           \l  %2 = load i64, i64* %__n.addr, align 8\l  %mul = mul i64 %2, 8\l  %call2 = call i8* @_Znwm(i64 %mul)\l  %3 = bitcast i8* %call2 to i8**\l  ret i8** %3\l}"];
+}

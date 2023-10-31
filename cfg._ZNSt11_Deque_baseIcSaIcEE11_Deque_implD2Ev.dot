@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt11_Deque_baseIcSaIcEE11_Deque_implD2Ev' function" {
+	label="CFG for '_ZNSt11_Deque_baseIcSaIcEE11_Deque_implD2Ev' function";
+
+	Node0x6b71160 [shape=record,label="{entry:\l  %this.addr = alloca %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"*, align 8\l  store %\"struct.std::_Deque_base\<char, std::allocator\<char\> \>::_Deque_impl\"*\l... %this, %\"struct.std::_Deque_base\<char, std::allocator\<char\> \>::_Deque_impl\"**\l... %this.addr, align 8\l  %this1 = load %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"*, %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"** %this.addr, align 8\l  %0 = bitcast %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"* %this1 to %\"class.std::allocator\"*\l  call void @_ZNSaIcED2Ev(%\"class.std::allocator\"* %0) #2\l  ret void\l}"];
+}

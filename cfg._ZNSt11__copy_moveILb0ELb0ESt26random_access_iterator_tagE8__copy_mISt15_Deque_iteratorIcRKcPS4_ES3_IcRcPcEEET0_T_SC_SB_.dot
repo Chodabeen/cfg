@@ -1,0 +1,14 @@
+digraph "CFG for '_ZNSt11__copy_moveILb0ELb0ESt26random_access_iterator_tagE8__copy_mISt15_Deque_iteratorIcRKcPS4_ES3_IcRcPcEEET0_T_SC_SB_' function" {
+	label="CFG for '_ZNSt11__copy_moveILb0ELb0ESt26random_access_iterator_tagE8__copy_mISt15_Deque_iteratorIcRKcPS4_ES3_IcRcPcEEET0_T_SC_SB_' function";
+
+	Node0x6b9d850 [shape=record,label="{entry:\l  %__n = alloca i64, align 8\l  %call = call i64\l... @_ZStmiIcRKcPS0_ENSt15_Deque_iteratorIT_T0_T1_E15difference_typeERKS7_SA_(%\"st\l...ruct.std::_Deque_iterator.3\"* dereferenceable(32) %__last,\l... %\"struct.std::_Deque_iterator.3\"* dereferenceable(32) %__first)\l  store i64 %call, i64* %__n, align 8\l  br label %for.cond\l}"];
+	Node0x6b9d850 -> Node0x6b9dd80;
+	Node0x6b9dd80 [shape=record,label="{for.cond:                                         \l  %0 = load i64, i64* %__n, align 8\l  %cmp = icmp sgt i64 %0, 0\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b9dd80:s0 -> Node0x6b9de80;
+	Node0x6b9dd80:s1 -> Node0x6b9df60;
+	Node0x6b9de80 [shape=record,label="{for.body:                                         \l  %call1 = call dereferenceable(1) i8*\l... @_ZNKSt15_Deque_iteratorIcRKcPS0_EdeEv(%\"struct.std::_Deque_iterator.3\"*\l... %__first)\l  %1 = load i8, i8* %call1, align 1\l  %call2 = call dereferenceable(1) i8*\l... @_ZNKSt15_Deque_iteratorIcRcPcEdeEv(%\"struct.std::_Deque_iterator\"* %__result)\l  store i8 %1, i8* %call2, align 1\l  %call3 = call dereferenceable(32) %\"struct.std::_Deque_iterator.3\"*\l... @_ZNSt15_Deque_iteratorIcRKcPS0_EppEv(%\"struct.std::_Deque_iterator.3\"*\l... %__first)\l  %call4 = call dereferenceable(32) %\"struct.std::_Deque_iterator\"*\l... @_ZNSt15_Deque_iteratorIcRcPcEppEv(%\"struct.std::_Deque_iterator\"* %__result)\l  br label %for.inc\l}"];
+	Node0x6b9de80 -> Node0x6b9ec70;
+	Node0x6b9ec70 [shape=record,label="{for.inc:                                          \l  %2 = load i64, i64* %__n, align 8\l  %dec = add nsw i64 %2, -1\l  store i64 %dec, i64* %__n, align 8\l  br label %for.cond\l}"];
+	Node0x6b9ec70 -> Node0x6b9dd80;
+	Node0x6b9df60 [shape=record,label="{for.end:                                          \l  call void\l... @_ZNSt15_Deque_iteratorIcRcPcEC2ERKS2_(%\"struct.std::_Deque_iterator\"*\l... %agg.result, %\"struct.std::_Deque_iterator\"* dereferenceable(32) %__result)\l  ret void\l}"];
+}

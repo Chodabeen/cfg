@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt12__niter_baseISt15_Deque_iteratorIcRcPcEENSt11_Niter_baseIT_E13iterator_typeES5_' function" {
+	label="CFG for '_ZSt12__niter_baseISt15_Deque_iteratorIcRcPcEENSt11_Niter_baseIT_E13iterator_typeES5_' function";
+
+	Node0x6b9d470 [shape=record,label="{entry:\l  %agg.tmp = alloca %\"struct.std::_Deque_iterator\", align 8\l  call void\l... @_ZNSt15_Deque_iteratorIcRcPcEC2ERKS2_(%\"struct.std::_Deque_iterator\"*\l... %agg.tmp, %\"struct.std::_Deque_iterator\"* dereferenceable(32) %__it)\l  call void\l... @_ZNSt10_Iter_baseISt15_Deque_iteratorIcRcPcELb0EE7_S_baseES3_(%\"struct.std::_\l...Deque_iterator\"* sret %agg.result, %\"struct.std::_Deque_iterator\"* %agg.tmp)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIcEE17_S_select_on_copyERKS1_' function" {
+	label="CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIcEE17_S_select_on_copyERKS1_' function";
+
+	Node0x6b8f970 [shape=record,label="{entry:\l  %__a.addr = alloca %\"class.std::allocator\"*, align 8\l  store %\"class.std::allocator\"* %__a, %\"class.std::allocator\"** %__a.addr,\l... align 8\l  %0 = load %\"class.std::allocator\"*, %\"class.std::allocator\"** %__a.addr,\l... align 8\l  ret %\"class.std::allocator\"* %0\l}"];
+}

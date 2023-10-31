@@ -1,0 +1,12 @@
+digraph "CFG for '_ZSt3maxImERKT_S2_S2_' function" {
+	label="CFG for '_ZSt3maxImERKT_S2_S2_' function";
+
+	Node0x6b72df0 [shape=record,label="{entry:\l  %retval = alloca i64*, align 8\l  %__a.addr = alloca i64*, align 8\l  %__b.addr = alloca i64*, align 8\l  store i64* %__a, i64** %__a.addr, align 8\l  store i64* %__b, i64** %__b.addr, align 8\l  %0 = load i64*, i64** %__a.addr, align 8\l  %1 = load i64, i64* %0, align 8\l  %2 = load i64*, i64** %__b.addr, align 8\l  %3 = load i64, i64* %2, align 8\l  %cmp = icmp ult i64 %1, %3\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b72df0:s0 -> Node0x6b732d0;
+	Node0x6b72df0:s1 -> Node0x6b73380;
+	Node0x6b732d0 [shape=record,label="{if.then:                                          \l  %4 = load i64*, i64** %__b.addr, align 8\l  store i64* %4, i64** %retval, align 8\l  br label %return\l}"];
+	Node0x6b732d0 -> Node0x6b735a0;
+	Node0x6b73380 [shape=record,label="{if.end:                                           \l  %5 = load i64*, i64** %__a.addr, align 8\l  store i64* %5, i64** %retval, align 8\l  br label %return\l}"];
+	Node0x6b73380 -> Node0x6b735a0;
+	Node0x6b735a0 [shape=record,label="{return:                                           \l  %6 = load i64*, i64** %retval, align 8\l  ret i64* %6\l}"];
+}

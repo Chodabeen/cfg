@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt5dequeIcSaIcEE5beginEv' function" {
+	label="CFG for '_ZNKSt5dequeIcSaIcEE5beginEv' function";
+
+	Node0x6b937b0 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::deque\"*, align 8\l  store %\"class.std::deque\"* %this, %\"class.std::deque\"** %this.addr, align 8\l  %this1 = load %\"class.std::deque\"*, %\"class.std::deque\"** %this.addr, align 8\l  %0 = bitcast %\"class.std::deque\"* %this1 to %\"class.std::_Deque_base\"*\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\",\l... %\"class.std::_Deque_base\"* %0, i32 0, i32 0\l  %_M_start = getelementptr inbounds %\"struct.std::_Deque_base\<char,\l... std::allocator\<char\> \>::_Deque_impl\", %\"struct.std::_Deque_base\<char,\l... std::allocator\<char\> \>::_Deque_impl\"* %_M_impl, i32 0, i32 2\l  call void\l... @_ZNSt15_Deque_iteratorIcRKcPS0_EC2ERKS_IcRcPcE(%\"struct.std::_Deque_iterator.\l...3\"* %agg.result, %\"struct.std::_Deque_iterator\"* dereferenceable(32) %_M_start)\l  ret void\l}"];
+}

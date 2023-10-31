@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx13new_allocatorIcE9constructEPcRKc' function" {
+	label="CFG for '_ZN9__gnu_cxx13new_allocatorIcE9constructEPcRKc' function";
+
+	Node0x6bac900 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.__gnu_cxx::new_allocator\"*, align 8\l  %__p.addr = alloca i8*, align 8\l  %__val.addr = alloca i8*, align 8\l  store %\"class.__gnu_cxx::new_allocator\"* %this,\l... %\"class.__gnu_cxx::new_allocator\"** %this.addr, align 8\l  store i8* %__p, i8** %__p.addr, align 8\l  store i8* %__val, i8** %__val.addr, align 8\l  %this1 = load %\"class.__gnu_cxx::new_allocator\"*,\l... %\"class.__gnu_cxx::new_allocator\"** %this.addr, align 8\l  %0 = load i8*, i8** %__p.addr, align 8\l  %1 = load i8*, i8** %__val.addr, align 8\l  %2 = load i8, i8* %1, align 1\l  store i8 %2, i8* %0, align 1\l  ret void\l}"];
+}

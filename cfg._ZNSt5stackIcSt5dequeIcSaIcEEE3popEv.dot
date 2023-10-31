@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEE3popEv' function" {
+	label="CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEE3popEv' function";
+
+	Node0x6b55a70 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::stack\"*, align 8\l  store %\"class.std::stack\"* %this, %\"class.std::stack\"** %this.addr, align 8\l  %this1 = load %\"class.std::stack\"*, %\"class.std::stack\"** %this.addr, align 8\l  %c = getelementptr inbounds %\"class.std::stack\", %\"class.std::stack\"*\l... %this1, i32 0, i32 0\l  call void @_ZNSt5dequeIcSaIcEE8pop_backEv(%\"class.std::deque\"* %c)\l  ret void\l}"];
+}

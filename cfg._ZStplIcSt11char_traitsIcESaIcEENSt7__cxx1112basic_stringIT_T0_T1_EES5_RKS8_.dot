@@ -1,0 +1,29 @@
+digraph "CFG for '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EES5_RKS8_' function" {
+	label="CFG for '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EES5_RKS8_' function";
+
+	Node0x6b4ed80 [shape=record,label="{entry:\l  %__lhs.addr = alloca i8, align 1\l  %__rhs.addr = alloca %\"class.std::__cxx11::basic_string\"*, align 8\l  %nrvo = alloca i1, align 1\l  %__len = alloca i64, align 8\l  %exn.slot = alloca i8*\l  %ehselector.slot = alloca i32\l  store i8 %__lhs, i8* %__lhs.addr, align 1\l  store %\"class.std::__cxx11::basic_string\"* %__rhs,\l... %\"class.std::__cxx11::basic_string\"** %__rhs.addr, align 8\l  store i1 false, i1* %nrvo, align 1\l  call void\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(%\"class.std::__cxx1\l...1::basic_string\"* %agg.result)\l  %0 = load %\"class.std::__cxx11::basic_string\"*,\l... %\"class.std::__cxx11::basic_string\"** %__rhs.addr, align 8\l  %call = invoke i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv(%\"class.std::__\l...cxx11::basic_string\"* %0)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x6b4ed80 -> Node0x6b4f2b0;
+	Node0x6b4ed80 -> Node0x6b4f390;
+	Node0x6b4f2b0 [shape=record,label="{invoke.cont:                                      \l  store i64 %call, i64* %__len, align 8\l  %1 = load i64, i64* %__len, align 8\l  %add = add i64 %1, 1\l  invoke void\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm(%\"class.std::\l...__cxx11::basic_string\"* %agg.result, i64 %add)\l          to label %invoke.cont1 unwind label %lpad\l}"];
+	Node0x6b4f2b0 -> Node0x6b4ece0;
+	Node0x6b4f2b0 -> Node0x6b4f390;
+	Node0x6b4ece0 [shape=record,label="{invoke.cont1:                                     \l  %2 = load i8, i8* %__lhs.addr, align 1\l  %call3 = invoke dereferenceable(32) %\"class.std::__cxx11::basic_string\"*\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEmc(%\"class.std::\l...__cxx11::basic_string\"* %agg.result, i64 1, i8 signext %2)\l          to label %invoke.cont2 unwind label %lpad\l}"];
+	Node0x6b4ece0 -> Node0x6b4fb80;
+	Node0x6b4ece0 -> Node0x6b4f390;
+	Node0x6b4fb80 [shape=record,label="{invoke.cont2:                                     \l  %3 = load %\"class.std::__cxx11::basic_string\"*,\l... %\"class.std::__cxx11::basic_string\"** %__rhs.addr, align 8\l  %call5 = invoke dereferenceable(32) %\"class.std::__cxx11::basic_string\"*\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendERKS4_(%\"class.st\l...d::__cxx11::basic_string\"* %agg.result, %\"class.std::__cxx11::basic_string\"*\l... dereferenceable(32) %3)\l          to label %invoke.cont4 unwind label %lpad\l}"];
+	Node0x6b4fb80 -> Node0x6b4fdc0;
+	Node0x6b4fb80 -> Node0x6b4f390;
+	Node0x6b4fdc0 [shape=record,label="{invoke.cont4:                                     \l  store i1 true, i1* %nrvo, align 1\l  %nrvo.val = load i1, i1* %nrvo, align 1\l  br i1 %nrvo.val, label %nrvo.skipdtor, label %nrvo.unused\l|{<s0>T|<s1>F}}"];
+	Node0x6b4fdc0:s0 -> Node0x6b4f110;
+	Node0x6b4fdc0:s1 -> Node0x6b50290;
+	Node0x6b4f390 [shape=record,label="{lpad:                                             \l  %4 = landingpad \{ i8*, i32 \}\l          cleanup\l  %5 = extractvalue \{ i8*, i32 \} %4, 0\l  store i8* %5, i8** %exn.slot, align 8\l  %6 = extractvalue \{ i8*, i32 \} %4, 1\l  store i32 %6, i32* %ehselector.slot, align 4\l  invoke void\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%\"class.std::__cxx1\l...1::basic_string\"* %agg.result)\l          to label %invoke.cont6 unwind label %terminate.lpad\l}"];
+	Node0x6b4f390 -> Node0x6b506d0;
+	Node0x6b4f390 -> Node0x6b50720;
+	Node0x6b50290 [shape=record,label="{nrvo.unused:                                      \l  call void\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%\"class.std::__cxx1\l...1::basic_string\"* %agg.result)\l  br label %nrvo.skipdtor\l}"];
+	Node0x6b50290 -> Node0x6b4f110;
+	Node0x6b4f110 [shape=record,label="{nrvo.skipdtor:                                    \l  ret void\l}"];
+	Node0x6b506d0 [shape=record,label="{invoke.cont6:                                     \l  br label %eh.resume\l}"];
+	Node0x6b506d0 -> Node0x6b50680;
+	Node0x6b50680 [shape=record,label="{eh.resume:                                        \l  %exn = load i8*, i8** %exn.slot, align 8\l  %sel = load i32, i32* %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ i8*, i32 \} undef, i8* %exn, 0\l  %lpad.val7 = insertvalue \{ i8*, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ i8*, i32 \} %lpad.val7\l}"];
+	Node0x6b50720 [shape=record,label="{terminate.lpad:                                   \l  %7 = landingpad \{ i8*, i32 \}\l          catch i8* null\l  %8 = extractvalue \{ i8*, i32 \} %7, 0\l  call void @__clang_call_terminate(i8* %8) #13\l  unreachable\l}"];
+}

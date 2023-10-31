@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEEC2ERKS2_' function" {
+	label="CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEEC2ERKS2_' function";
+
+	Node0x6b51df0 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::stack\"*, align 8\l  %__c.addr = alloca %\"class.std::deque\"*, align 8\l  store %\"class.std::stack\"* %this, %\"class.std::stack\"** %this.addr, align 8\l  store %\"class.std::deque\"* %__c, %\"class.std::deque\"** %__c.addr, align 8\l  %this1 = load %\"class.std::stack\"*, %\"class.std::stack\"** %this.addr, align 8\l  %c = getelementptr inbounds %\"class.std::stack\", %\"class.std::stack\"*\l... %this1, i32 0, i32 0\l  %0 = load %\"class.std::deque\"*, %\"class.std::deque\"** %__c.addr, align 8\l  call void @_ZNSt5dequeIcSaIcEEC2ERKS1_(%\"class.std::deque\"* %c,\l... %\"class.std::deque\"* dereferenceable(80) %0)\l  ret void\l}"];
+}

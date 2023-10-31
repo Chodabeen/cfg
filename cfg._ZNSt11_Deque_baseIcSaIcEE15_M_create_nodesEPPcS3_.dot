@@ -1,0 +1,35 @@
+digraph "CFG for '_ZNSt11_Deque_baseIcSaIcEE15_M_create_nodesEPPcS3_' function" {
+	label="CFG for '_ZNSt11_Deque_baseIcSaIcEE15_M_create_nodesEPPcS3_' function";
+
+	Node0x6b75290 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::_Deque_base\"*, align 8\l  %__nstart.addr = alloca i8**, align 8\l  %__nfinish.addr = alloca i8**, align 8\l  %__cur = alloca i8**, align 8\l  %exn.slot = alloca i8*\l  %ehselector.slot = alloca i32\l  store %\"class.std::_Deque_base\"* %this, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  store i8** %__nstart, i8*** %__nstart.addr, align 8\l  store i8** %__nfinish, i8*** %__nfinish.addr, align 8\l  %this1 = load %\"class.std::_Deque_base\"*, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %0 = load i8**, i8*** %__nstart.addr, align 8\l  store i8** %0, i8*** %__cur, align 8\l  br label %for.cond\l}"];
+	Node0x6b75290 -> Node0x6b758c0;
+	Node0x6b758c0 [shape=record,label="{for.cond:                                         \l  %1 = load i8**, i8*** %__cur, align 8\l  %2 = load i8**, i8*** %__nfinish.addr, align 8\l  %cmp = icmp ult i8** %1, %2\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b758c0:s0 -> Node0x6b75150;
+	Node0x6b758c0:s1 -> Node0x6b75cc0;
+	Node0x6b75150 [shape=record,label="{for.body:                                         \l  %call = invoke i8*\l... @_ZNSt11_Deque_baseIcSaIcEE16_M_allocate_nodeEv(%\"class.std::_Deque_base\"*\l... %this1)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x6b75150 -> Node0x6b75e00;
+	Node0x6b75150 -> Node0x6b75e80;
+	Node0x6b75e00 [shape=record,label="{invoke.cont:                                      \l  %3 = load i8**, i8*** %__cur, align 8\l  store i8* %call, i8** %3, align 8\l  br label %for.inc\l}"];
+	Node0x6b75e00 -> Node0x6b76250;
+	Node0x6b76250 [shape=record,label="{for.inc:                                          \l  %4 = load i8**, i8*** %__cur, align 8\l  %incdec.ptr = getelementptr inbounds i8*, i8** %4, i32 1\l  store i8** %incdec.ptr, i8*** %__cur, align 8\l  br label %for.cond\l}"];
+	Node0x6b76250 -> Node0x6b758c0;
+	Node0x6b75e80 [shape=record,label="{lpad:                                             \l  %5 = landingpad \{ i8*, i32 \}\l          catch i8* null\l  %6 = extractvalue \{ i8*, i32 \} %5, 0\l  store i8* %6, i8** %exn.slot, align 8\l  %7 = extractvalue \{ i8*, i32 \} %5, 1\l  store i32 %7, i32* %ehselector.slot, align 4\l  br label %catch\l}"];
+	Node0x6b75e80 -> Node0x6b76770;
+	Node0x6b76770 [shape=record,label="{catch:                                            \l  %exn = load i8*, i8** %exn.slot, align 8\l  %8 = call i8* @__cxa_begin_catch(i8* %exn) #2\l  %9 = load i8**, i8*** %__nstart.addr, align 8\l  %10 = load i8**, i8*** %__cur, align 8\l  invoke void\l... @_ZNSt11_Deque_baseIcSaIcEE16_M_destroy_nodesEPPcS3_(%\"class.std::_Deque_base\"\l...* %this1, i8** %9, i8** %10)\l          to label %invoke.cont3 unwind label %lpad2\l}"];
+	Node0x6b76770 -> Node0x6b76380;
+	Node0x6b76770 -> Node0x6b76b30;
+	Node0x6b76380 [shape=record,label="{invoke.cont3:                                     \l  invoke void @__cxa_rethrow() #13\l          to label %unreachable unwind label %lpad2\l}"];
+	Node0x6b76380 -> Node0x6b76f00;
+	Node0x6b76380 -> Node0x6b76b30;
+	Node0x6b75cc0 [shape=record,label="{for.end:                                          \l  br label %try.cont\l}"];
+	Node0x6b75cc0 -> Node0x6b75c10;
+	Node0x6b76b30 [shape=record,label="{lpad2:                                            \l  %11 = landingpad \{ i8*, i32 \}\l          cleanup\l  %12 = extractvalue \{ i8*, i32 \} %11, 0\l  store i8* %12, i8** %exn.slot, align 8\l  %13 = extractvalue \{ i8*, i32 \} %11, 1\l  store i32 %13, i32* %ehselector.slot, align 4\l  invoke void @__cxa_end_catch()\l          to label %invoke.cont4 unwind label %terminate.lpad\l}"];
+	Node0x6b76b30 -> Node0x6b77530;
+	Node0x6b76b30 -> Node0x6b77580;
+	Node0x6b77530 [shape=record,label="{invoke.cont4:                                     \l  br label %eh.resume\l}"];
+	Node0x6b77530 -> Node0x6b77750;
+	Node0x6b75c10 [shape=record,label="{try.cont:                                         \l  ret void\l}"];
+	Node0x6b77750 [shape=record,label="{eh.resume:                                        \l  %exn5 = load i8*, i8** %exn.slot, align 8\l  %sel = load i32, i32* %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ i8*, i32 \} undef, i8* %exn5, 0\l  %lpad.val6 = insertvalue \{ i8*, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ i8*, i32 \} %lpad.val6\l}"];
+	Node0x6b77580 [shape=record,label="{terminate.lpad:                                   \l  %14 = landingpad \{ i8*, i32 \}\l          catch i8* null\l  %15 = extractvalue \{ i8*, i32 \} %14, 0\l  call void @__clang_call_terminate(i8* %15) #14\l  unreachable\l}"];
+	Node0x6b76f00 [shape=record,label="{unreachable:                                      \l  unreachable\l}"];
+}

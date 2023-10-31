@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIPcEE10deallocateERS2_PS1_m' function" {
+	label="CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIPcEE10deallocateERS2_PS1_m' function";
+
+	Node0x6b87510 [shape=record,label="{entry:\l  %__a.addr = alloca %\"class.std::allocator.0\"*, align 8\l  %__p.addr = alloca i8**, align 8\l  %__n.addr = alloca i64, align 8\l  store %\"class.std::allocator.0\"* %__a, %\"class.std::allocator.0\"**\l... %__a.addr, align 8\l  store i8** %__p, i8*** %__p.addr, align 8\l  store i64 %__n, i64* %__n.addr, align 8\l  %0 = load %\"class.std::allocator.0\"*, %\"class.std::allocator.0\"** %__a.addr,\l... align 8\l  %1 = bitcast %\"class.std::allocator.0\"* %0 to\l... %\"class.__gnu_cxx::new_allocator.1\"*\l  %2 = load i8**, i8*** %__p.addr, align 8\l  %3 = load i64, i64* %__n.addr, align 8\l  call void\l... @_ZN9__gnu_cxx13new_allocatorIPcE10deallocateEPS1_m(%\"class.__gnu_cxx::new_all\l...ocator.1\"* %1, i8** %2, i64 %3)\l  ret void\l}"];
+}

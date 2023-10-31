@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt11_Deque_baseIcSaIcEE19_M_get_Tp_allocatorEv' function" {
+	label="CFG for '_ZNKSt11_Deque_baseIcSaIcEE19_M_get_Tp_allocatorEv' function";
+
+	Node0x6b7b8e0 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::_Deque_base\"*, align 8\l  store %\"class.std::_Deque_base\"* %this, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %this1 = load %\"class.std::_Deque_base\"*, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\",\l... %\"class.std::_Deque_base\"* %this1, i32 0, i32 0\l  %0 = bitcast %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"* %_M_impl to %\"class.std::allocator\"*\l  ret %\"class.std::allocator\"* %0\l}"];
+}

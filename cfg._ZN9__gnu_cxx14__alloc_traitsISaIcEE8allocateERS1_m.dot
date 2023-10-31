@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIcEE8allocateERS1_m' function" {
+	label="CFG for '_ZN9__gnu_cxx14__alloc_traitsISaIcEE8allocateERS1_m' function";
+
+	Node0x6b5e2f0 [shape=record,label="{entry:\l  %__a.addr = alloca %\"class.std::allocator\"*, align 8\l  %__n.addr = alloca i64, align 8\l  store %\"class.std::allocator\"* %__a, %\"class.std::allocator\"** %__a.addr,\l... align 8\l  store i64 %__n, i64* %__n.addr, align 8\l  %0 = load %\"class.std::allocator\"*, %\"class.std::allocator\"** %__a.addr,\l... align 8\l  %1 = bitcast %\"class.std::allocator\"* %0 to\l... %\"class.__gnu_cxx::new_allocator\"*\l  %2 = load i64, i64* %__n.addr, align 8\l  %call = call i8*\l... @_ZN9__gnu_cxx13new_allocatorIcE8allocateEmPKv(%\"class.__gnu_cxx::new_allocato\l...r\"* %1, i64 %2, i8* null)\l  ret i8* %call\l}"];
+}

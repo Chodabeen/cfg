@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt11_Deque_baseIcSaIcEE16_M_allocate_nodeEv' function" {
+	label="CFG for '_ZNSt11_Deque_baseIcSaIcEE16_M_allocate_nodeEv' function";
+
+	Node0x6b5c930 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::_Deque_base\"*, align 8\l  store %\"class.std::_Deque_base\"* %this, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %this1 = load %\"class.std::_Deque_base\"*, %\"class.std::_Deque_base\"**\l... %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\",\l... %\"class.std::_Deque_base\"* %this1, i32 0, i32 0\l  %0 = bitcast %\"struct.std::_Deque_base\<char, std::allocator\<char\>\l... \>::_Deque_impl\"* %_M_impl to %\"class.std::allocator\"*\l  %call = call i64 @_ZSt16__deque_buf_sizem(i64 1)\l  %call2 = call i8*\l... @_ZN9__gnu_cxx14__alloc_traitsISaIcEE8allocateERS1_m(%\"class.std::allocator\"*\l... dereferenceable(1) %0, i64 %call)\l  ret i8* %call2\l}"];
+}

@@ -1,0 +1,32 @@
+digraph "CFG for '_Z11getPriorityc' function" {
+	label="CFG for '_Z11getPriorityc' function";
+
+	Node0x6b3d3b0 [shape=record,label="{entry:\l  %retval = alloca i32, align 4\l  %C.addr = alloca i8, align 1\l  store i8 %C, i8* %C.addr, align 1\l  %0 = load i8, i8* %C.addr, align 1\l  %conv = sext i8 %0 to i32\l  %cmp = icmp eq i32 %conv, 45\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x6b3d3b0:s0 -> Node0x6b3d6e0;
+	Node0x6b3d3b0:s1 -> Node0x6b3d7b0;
+	Node0x6b3d7b0 [shape=record,label="{lor.lhs.false:                                    \l  %1 = load i8, i8* %C.addr, align 1\l  %conv1 = sext i8 %1 to i32\l  %cmp2 = icmp eq i32 %conv1, 43\l  br i1 %cmp2, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x6b3d7b0:s0 -> Node0x6b3d6e0;
+	Node0x6b3d7b0:s1 -> Node0x6b3da60;
+	Node0x6b3d6e0 [shape=record,label="{if.then:                                          \l  store i32 1, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3d6e0 -> Node0x6b3dc30;
+	Node0x6b3da60 [shape=record,label="{if.else:                                          \l  %2 = load i8, i8* %C.addr, align 1\l  %conv3 = sext i8 %2 to i32\l  %cmp4 = icmp eq i32 %conv3, 42\l  br i1 %cmp4, label %if.then8, label %lor.lhs.false5\l|{<s0>T|<s1>F}}"];
+	Node0x6b3da60:s0 -> Node0x6b3df30;
+	Node0x6b3da60:s1 -> Node0x6b3e010;
+	Node0x6b3e010 [shape=record,label="{lor.lhs.false5:                                   \l  %3 = load i8, i8* %C.addr, align 1\l  %conv6 = sext i8 %3 to i32\l  %cmp7 = icmp eq i32 %conv6, 47\l  br i1 %cmp7, label %if.then8, label %if.else9\l|{<s0>T|<s1>F}}"];
+	Node0x6b3e010:s0 -> Node0x6b3df30;
+	Node0x6b3e010:s1 -> Node0x6b203e0;
+	Node0x6b3df30 [shape=record,label="{if.then8:                                         \l  store i32 2, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3df30 -> Node0x6b3dc30;
+	Node0x6b203e0 [shape=record,label="{if.else9:                                         \l  %4 = load i8, i8* %C.addr, align 1\l  %conv10 = sext i8 %4 to i32\l  %cmp11 = icmp eq i32 %conv10, 94\l  br i1 %cmp11, label %if.then12, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b203e0:s0 -> Node0x6b3ea20;
+	Node0x6b203e0:s1 -> Node0x6b3eb00;
+	Node0x6b3ea20 [shape=record,label="{if.then12:                                        \l  store i32 3, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3ea20 -> Node0x6b3dc30;
+	Node0x6b3eb00 [shape=record,label="{if.end:                                           \l  br label %if.end13\l}"];
+	Node0x6b3eb00 -> Node0x6b3ed00;
+	Node0x6b3ed00 [shape=record,label="{if.end13:                                         \l  br label %if.end14\l}"];
+	Node0x6b3ed00 -> Node0x6b3ede0;
+	Node0x6b3ede0 [shape=record,label="{if.end14:                                         \l  store i32 0, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3ede0 -> Node0x6b3dc30;
+	Node0x6b3dc30 [shape=record,label="{return:                                           \l  %5 = load i32, i32* %retval, align 4\l  ret i32 %5\l}"];
+}

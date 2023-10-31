@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt12__miter_baseISt15_Deque_iteratorIcRKcPS1_EENSt11_Miter_baseIT_E13iterator_typeES6_' function" {
+	label="CFG for '_ZSt12__miter_baseISt15_Deque_iteratorIcRKcPS1_EENSt11_Miter_baseIT_E13iterator_typeES6_' function";
+
+	Node0x6b9b980 [shape=record,label="{entry:\l  %agg.tmp = alloca %\"struct.std::_Deque_iterator.3\", align 8\l  %0 = bitcast %\"struct.std::_Deque_iterator.3\"* %agg.tmp to i8*\l  %1 = bitcast %\"struct.std::_Deque_iterator.3\"* %__it to i8*\l  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* %1, i64 32, i32 8, i1 false)\l  call void\l... @_ZNSt10_Iter_baseISt15_Deque_iteratorIcRKcPS1_ELb0EE7_S_baseES4_(%\"struct.std\l...::_Deque_iterator.3\"* sret %agg.result, %\"struct.std::_Deque_iterator.3\"*\l... byval align 8 %agg.tmp)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx13new_allocatorIcE7destroyEPc' function" {
+	label="CFG for '_ZN9__gnu_cxx13new_allocatorIcE7destroyEPc' function";
+
+	Node0x6bcce00 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.__gnu_cxx::new_allocator\"*, align 8\l  %__p.addr = alloca i8*, align 8\l  store %\"class.__gnu_cxx::new_allocator\"* %this,\l... %\"class.__gnu_cxx::new_allocator\"** %this.addr, align 8\l  store i8* %__p, i8** %__p.addr, align 8\l  %this1 = load %\"class.__gnu_cxx::new_allocator\"*,\l... %\"class.__gnu_cxx::new_allocator\"** %this.addr, align 8\l  ret void\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for '_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPcEEPT_PKS4_S7_S5_' function" {
+	label="CFG for '_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPcEEPT_PKS4_S7_S5_' function";
+
+	Node0x6b7f330 [shape=record,label="{entry:\l  %__first.addr = alloca i8**, align 8\l  %__last.addr = alloca i8**, align 8\l  %__result.addr = alloca i8**, align 8\l  %_Num = alloca i64, align 8\l  store i8** %__first, i8*** %__first.addr, align 8\l  store i8** %__last, i8*** %__last.addr, align 8\l  store i8** %__result, i8*** %__result.addr, align 8\l  %0 = load i8**, i8*** %__last.addr, align 8\l  %1 = load i8**, i8*** %__first.addr, align 8\l  %sub.ptr.lhs.cast = ptrtoint i8** %0 to i64\l  %sub.ptr.rhs.cast = ptrtoint i8** %1 to i64\l  %sub.ptr.sub = sub i64 %sub.ptr.lhs.cast, %sub.ptr.rhs.cast\l  %sub.ptr.div = sdiv exact i64 %sub.ptr.sub, 8\l  store i64 %sub.ptr.div, i64* %_Num, align 8\l  %2 = load i64, i64* %_Num, align 8\l  %tobool = icmp ne i64 %2, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x6b7f330:s0 -> Node0x6b7f200;
+	Node0x6b7f330:s1 -> Node0x6b7fbf0;
+	Node0x6b7f200 [shape=record,label="{if.then:                                          \l  %3 = load i8**, i8*** %__result.addr, align 8\l  %4 = bitcast i8** %3 to i8*\l  %5 = load i8**, i8*** %__first.addr, align 8\l  %6 = bitcast i8** %5 to i8*\l  %7 = load i64, i64* %_Num, align 8\l  %mul = mul i64 8, %7\l  call void @llvm.memmove.p0i8.p0i8.i64(i8* %4, i8* %6, i64 %mul, i32 8, i1\l... false)\l  br label %if.end\l}"];
+	Node0x6b7f200 -> Node0x6b7fbf0;
+	Node0x6b7fbf0 [shape=record,label="{if.end:                                           \l  %8 = load i8**, i8*** %__result.addr, align 8\l  %9 = load i64, i64* %_Num, align 8\l  %add.ptr = getelementptr inbounds i8*, i8** %8, i64 %9\l  ret i8** %add.ptr\l}"];
+}

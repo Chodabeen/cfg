@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEE4pushERKc' function" {
+	label="CFG for '_ZNSt5stackIcSt5dequeIcSaIcEEE4pushERKc' function";
+
+	Node0x6b54aa0 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::stack\"*, align 8\l  %__x.addr = alloca i8*, align 8\l  store %\"class.std::stack\"* %this, %\"class.std::stack\"** %this.addr, align 8\l  store i8* %__x, i8** %__x.addr, align 8\l  %this1 = load %\"class.std::stack\"*, %\"class.std::stack\"** %this.addr, align 8\l  %c = getelementptr inbounds %\"class.std::stack\", %\"class.std::stack\"*\l... %this1, i32 0, i32 0\l  %0 = load i8*, i8** %__x.addr, align 8\l  call void @_ZNSt5dequeIcSaIcEE9push_backERKc(%\"class.std::deque\"* %c, i8*\l... dereferenceable(1) %0)\l  ret void\l}"];
+}

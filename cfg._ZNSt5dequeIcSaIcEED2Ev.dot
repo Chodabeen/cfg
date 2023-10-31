@@ -1,0 +1,24 @@
+digraph "CFG for '_ZNSt5dequeIcSaIcEED2Ev' function" {
+	label="CFG for '_ZNSt5dequeIcSaIcEED2Ev' function";
+
+	Node0x6b52560 [shape=record,label="{entry:\l  %this.addr = alloca %\"class.std::deque\"*, align 8\l  %agg.tmp = alloca %\"struct.std::_Deque_iterator\", align 8\l  %exn.slot = alloca i8*\l  %ehselector.slot = alloca i32\l  %agg.tmp2 = alloca %\"struct.std::_Deque_iterator\", align 8\l  store %\"class.std::deque\"* %this, %\"class.std::deque\"** %this.addr, align 8\l  %this1 = load %\"class.std::deque\"*, %\"class.std::deque\"** %this.addr, align 8\l  invoke void @_ZNSt5dequeIcSaIcEE5beginEv(%\"struct.std::_Deque_iterator\"*\l... sret %agg.tmp, %\"class.std::deque\"* %this1)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x6b52560 -> Node0x6b52910;
+	Node0x6b52560 -> Node0x6b529f0;
+	Node0x6b52910 [shape=record,label="{invoke.cont:                                      \l  invoke void @_ZNSt5dequeIcSaIcEE3endEv(%\"struct.std::_Deque_iterator\"* sret\l... %agg.tmp2, %\"class.std::deque\"* %this1)\l          to label %invoke.cont3 unwind label %lpad\l}"];
+	Node0x6b52910 -> Node0x6b52df0;
+	Node0x6b52910 -> Node0x6b529f0;
+	Node0x6b52df0 [shape=record,label="{invoke.cont3:                                     \l  %0 = bitcast %\"class.std::deque\"* %this1 to %\"class.std::_Deque_base\"*\l  %call = invoke dereferenceable(1) %\"class.std::allocator\"*\l... @_ZNSt11_Deque_baseIcSaIcEE19_M_get_Tp_allocatorEv(%\"class.std::_Deque_base\"*\l... %0)\l          to label %invoke.cont4 unwind label %lpad\l}"];
+	Node0x6b52df0 -> Node0x6b53160;
+	Node0x6b52df0 -> Node0x6b529f0;
+	Node0x6b53160 [shape=record,label="{invoke.cont4:                                     \l  invoke void\l... @_ZNSt5dequeIcSaIcEE15_M_destroy_dataESt15_Deque_iteratorIcRcPcES5_RKS0_(%\"cla\l...ss.std::deque\"* %this1, %\"struct.std::_Deque_iterator\"* %agg.tmp,\l... %\"struct.std::_Deque_iterator\"* %agg.tmp2, %\"class.std::allocator\"*\l... dereferenceable(1) %call)\l          to label %invoke.cont5 unwind label %lpad\l}"];
+	Node0x6b53160 -> Node0x6b524d0;
+	Node0x6b53160 -> Node0x6b529f0;
+	Node0x6b524d0 [shape=record,label="{invoke.cont5:                                     \l  %1 = bitcast %\"class.std::deque\"* %this1 to %\"class.std::_Deque_base\"*\l  call void @_ZNSt11_Deque_baseIcSaIcEED2Ev(%\"class.std::_Deque_base\"* %1)\l  ret void\l}"];
+	Node0x6b529f0 [shape=record,label="{lpad:                                             \l  %2 = landingpad \{ i8*, i32 \}\l          cleanup\l  %3 = extractvalue \{ i8*, i32 \} %2, 0\l  store i8* %3, i8** %exn.slot, align 8\l  %4 = extractvalue \{ i8*, i32 \} %2, 1\l  store i32 %4, i32* %ehselector.slot, align 4\l  %5 = bitcast %\"class.std::deque\"* %this1 to %\"class.std::_Deque_base\"*\l  invoke void @_ZNSt11_Deque_baseIcSaIcEED2Ev(%\"class.std::_Deque_base\"* %5)\l          to label %invoke.cont6 unwind label %terminate.lpad\l}"];
+	Node0x6b529f0 -> Node0x6b541e0;
+	Node0x6b529f0 -> Node0x6b542c0;
+	Node0x6b541e0 [shape=record,label="{invoke.cont6:                                     \l  br label %eh.resume\l}"];
+	Node0x6b541e0 -> Node0x6b544a0;
+	Node0x6b544a0 [shape=record,label="{eh.resume:                                        \l  %exn = load i8*, i8** %exn.slot, align 8\l  %sel = load i32, i32* %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ i8*, i32 \} undef, i8* %exn, 0\l  %lpad.val7 = insertvalue \{ i8*, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ i8*, i32 \} %lpad.val7\l}"];
+	Node0x6b542c0 [shape=record,label="{terminate.lpad:                                   \l  %6 = landingpad \{ i8*, i32 \}\l          catch i8* null\l  %7 = extractvalue \{ i8*, i32 \} %6, 0\l  call void @__clang_call_terminate(i8* %7) #13\l  unreachable\l}"];
+}
