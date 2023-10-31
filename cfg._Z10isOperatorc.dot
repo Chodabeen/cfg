@@ -1,0 +1,30 @@
+digraph "CFG for '_Z10isOperatorc' function" {
+	label="CFG for '_Z10isOperatorc' function";
+
+	Node0x6b1c9f0 [shape=record,label="{entry:\l  %retval = alloca i1, align 1\l  %a.addr = alloca i8, align 1\l  store i8 %a, i8* %a.addr, align 1\l  %0 = load i8, i8* %a.addr, align 1\l  %conv = sext i8 %0 to i32\l  switch i32 %conv, label %sw.default [\l    i32 43, label %sw.bb\l    i32 45, label %sw.bb1\l    i32 42, label %sw.bb2\l    i32 47, label %sw.bb3\l    i32 40, label %sw.bb4\l    i32 41, label %sw.bb5\l    i32 94, label %sw.bb6\l  ]\l|{<s0>def|<s1>43|<s2>45|<s3>42|<s4>47|<s5>40|<s6>41|<s7>94}}"];
+	Node0x6b1c9f0:s0 -> Node0x6b38bb0;
+	Node0x6b1c9f0:s1 -> Node0x6b38cc0;
+	Node0x6b1c9f0:s2 -> Node0x6b38dc0;
+	Node0x6b1c9f0:s3 -> Node0x6b38ec0;
+	Node0x6b1c9f0:s4 -> Node0x6b38fc0;
+	Node0x6b1c9f0:s5 -> Node0x6b390c0;
+	Node0x6b1c9f0:s6 -> Node0x6b391c0;
+	Node0x6b1c9f0:s7 -> Node0x6b392c0;
+	Node0x6b38cc0 [shape=record,label="{sw.bb:                                            \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b38cc0 -> Node0x6b396d0;
+	Node0x6b38dc0 [shape=record,label="{sw.bb1:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b38dc0 -> Node0x6b396d0;
+	Node0x6b38ec0 [shape=record,label="{sw.bb2:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b38ec0 -> Node0x6b396d0;
+	Node0x6b38fc0 [shape=record,label="{sw.bb3:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b38fc0 -> Node0x6b396d0;
+	Node0x6b390c0 [shape=record,label="{sw.bb4:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b390c0 -> Node0x6b396d0;
+	Node0x6b391c0 [shape=record,label="{sw.bb5:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b391c0 -> Node0x6b396d0;
+	Node0x6b392c0 [shape=record,label="{sw.bb6:                                           \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b392c0 -> Node0x6b396d0;
+	Node0x6b38bb0 [shape=record,label="{sw.default:                                       \l  store i1 false, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b38bb0 -> Node0x6b396d0;
+	Node0x6b396d0 [shape=record,label="{return:                                           \l  %1 = load i1, i1* %retval, align 1\l  ret i1 %1\l}"];
+}

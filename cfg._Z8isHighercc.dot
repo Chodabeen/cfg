@@ -1,0 +1,12 @@
+digraph "CFG for '_Z8isHighercc' function" {
+	label="CFG for '_Z8isHighercc' function";
+
+	Node0x6b3b270 [shape=record,label="{entry:\l  %retval = alloca i1, align 1\l  %a.addr = alloca i8, align 1\l  %b.addr = alloca i8, align 1\l  store i8 %a, i8* %a.addr, align 1\l  store i8 %b, i8* %b.addr, align 1\l  %0 = load i8, i8* %a.addr, align 1\l  %call = call i32 @_Z5orderc(i8 signext %0)\l  %1 = load i8, i8* %b.addr, align 1\l  %call1 = call i32 @_Z5orderc(i8 signext %1)\l  %cmp = icmp sge i32 %call, %call1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x6b3b270:s0 -> Node0x6b3b850;
+	Node0x6b3b270:s1 -> Node0x6b3b920;
+	Node0x6b3b850 [shape=record,label="{if.then:                                          \l  store i1 true, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b3b850 -> Node0x6b3baf0;
+	Node0x6b3b920 [shape=record,label="{if.else:                                          \l  store i1 false, i1* %retval, align 1\l  br label %return\l}"];
+	Node0x6b3b920 -> Node0x6b3baf0;
+	Node0x6b3baf0 [shape=record,label="{return:                                           \l  %2 = load i1, i1* %retval, align 1\l  ret i1 %2\l}"];
+}

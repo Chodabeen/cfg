@@ -1,0 +1,24 @@
+digraph "CFG for '_Z5orderc' function" {
+	label="CFG for '_Z5orderc' function";
+
+	Node0x6b3a1e0 [shape=record,label="{entry:\l  %retval = alloca i32, align 4\l  %op.addr = alloca i8, align 1\l  store i8 %op, i8* %op.addr, align 1\l  %0 = load i8, i8* %op.addr, align 1\l  %conv = sext i8 %0 to i32\l  switch i32 %conv, label %sw.default [\l    i32 43, label %sw.bb\l    i32 45, label %sw.bb1\l    i32 42, label %sw.bb2\l    i32 47, label %sw.bb3\l    i32 94, label %sw.bb4\l  ]\l|{<s0>def|<s1>43|<s2>45|<s3>42|<s4>47|<s5>94}}"];
+	Node0x6b3a1e0:s0 -> Node0x6b3a480;
+	Node0x6b3a1e0:s1 -> Node0x6b3a560;
+	Node0x6b3a1e0:s2 -> Node0x6b3a630;
+	Node0x6b3a1e0:s3 -> Node0x6b3a700;
+	Node0x6b3a1e0:s4 -> Node0x6b3a7d0;
+	Node0x6b3a1e0:s5 -> Node0x6b3a8a0;
+	Node0x6b3a560 [shape=record,label="{sw.bb:                                            \l  store i32 1, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a560 -> Node0x6b3ab60;
+	Node0x6b3a630 [shape=record,label="{sw.bb1:                                           \l  store i32 1, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a630 -> Node0x6b3ab60;
+	Node0x6b3a700 [shape=record,label="{sw.bb2:                                           \l  store i32 2, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a700 -> Node0x6b3ab60;
+	Node0x6b3a7d0 [shape=record,label="{sw.bb3:                                           \l  store i32 2, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a7d0 -> Node0x6b3ab60;
+	Node0x6b3a8a0 [shape=record,label="{sw.bb4:                                           \l  store i32 3, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a8a0 -> Node0x6b3ab60;
+	Node0x6b3a480 [shape=record,label="{sw.default:                                       \l  store i32 0, i32* %retval, align 4\l  br label %return\l}"];
+	Node0x6b3a480 -> Node0x6b3ab60;
+	Node0x6b3ab60 [shape=record,label="{return:                                           \l  %1 = load i32, i32* %retval, align 4\l  ret i32 %1\l}"];
+}

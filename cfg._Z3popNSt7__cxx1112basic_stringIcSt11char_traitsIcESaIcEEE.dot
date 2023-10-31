@@ -1,0 +1,5 @@
+digraph "CFG for '_Z3popNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_Z3popNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x6b3bcc0 [shape=record,label="{entry:\l  %call = call i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv(%\"class.std::__\l...cxx11::basic_string\"* %s)\l  %sub = sub i64 %call, 1\l  call void\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEmm(%\"class.std:\l...:__cxx11::basic_string\"* sret %agg.result,\l... %\"class.std::__cxx11::basic_string\"* %s, i64 0, i64 %sub)\l  ret void\l}"];
+}
